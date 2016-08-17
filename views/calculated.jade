@@ -1,0 +1,44 @@
+html
+	head 
+		link(rel="stylesheet" type="text/css" href="/calculated.css")
+	title Calculadora de Ivs 
+
+	body
+		-var id = "images/("+ pokemonData.id +").png";
+		-for(var i = 0; i < pokemonData.types.length; i++) {
+		-	if (pokemonData.types[i].slot == 1){
+		-	var type = "images/"+ pokemonData.types[i].type.name+ ".jpg";
+		-	console.log(pokemonData.types[i].slot)
+		-	console.log(pokemonData.types[i].type.name)
+		-}
+		-}
+		-var index = 0;
+		-var position = 60;
+		img(id="fondo" src= type)
+		div(id = "Header")
+			form(method="POST", action="/calculate")
+				input(id="nameInput", type="textbox", placeholder=" Nombre del Pokémon", name="Name")
+				input(id="cpInput", type="textbox", placeholder="     Cp del Pokémon", name="Cp")
+				input(id="hpInput", type="textbox", placeholder="     Hp del Pokémon", name="Hp")
+				input(id="dustInput", type="textbox", placeholder="   Polvo que requiere", name="Dust")
+				input(id="send", type="submit", value="Calcular")
+		div(id = "Center")
+			img(id="PokeImage" src=id)
+			while index < pokemonData.types.length
+				if(index == 1)
+					h3(id = "slash") /
+				h3(class = "Type", style = "left: "+ position +"%;")= pokemonData.types[index].type.name
+				- position = position + 5;
+				- index++
+			h3(id = "Name")= pokemonData.name
+			h3(id = "Attack") Ataque
+			h3(id = "Defense") Defensa
+			h3(id = "Stamina") Estamina
+			h3(id = "Level") Nivel
+			h3(id = "Perfection") Perfeccion
+			h2(id = "AttackV")= Ivs.ivs[0].attackIV 
+			h2(id = "DefenseV")= Ivs.ivs[0].defenseIV
+			h2(id = "StaminaV")= Ivs.ivs[0].staminaIV
+			h2(id = "LevelV")= Ivs.ivs[0].level
+			h2(id = "PerfectionV")= Ivs.ivs[0].perfection
+

@@ -1,0 +1,15 @@
+html
+	head 
+		link(rel="stylesheet" type="text/css" href="/home.css")
+	title Calculadora de Ivs 
+
+	body
+		img(id="fondo" src="images/wallpaper.jpg")
+		div(id = "Center")
+		div(id = "Box")
+			form(method="POST", action="/calculate")
+				input(id="nameInput", type="textbox", placeholder=" Nombre del Pokémon", name="Name")
+				input(id="cpInput", type="textbox", placeholder="     Cp del Pokémon", name="Cp")
+				input(id="hpInput", type="textbox", placeholder="     Hp del Pokémon", name="Hp")
+				input(id="dustInput", type="textbox", placeholder="   Polvo que requiere", name="Dust")
+				input(id="send", type="submit", value="Calcular")
