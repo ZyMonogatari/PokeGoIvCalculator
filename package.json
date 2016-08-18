@@ -1,0 +1,30 @@
+{
+  "name": "pokegoivcalculator",
+  "version": "1.0.0",
+  "description": "a web app to calculate ivs for pokemon go",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "jade": "^1.11.0",
+    "express": "^4.14.0",
+    "pokedex-promise-v2": "^2.4.0",
+    "pokemon-go-iv-calculator": "^0.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZyMonogatari/PokeGoIvCalculator/"
+  },
+  "keywords": [
+    "pokemon",
+    "go",
+    "iv",
+    "calculator"
+  ],
+  "author": "ZyMonogatari",
+  "license": "ISC"
+}
