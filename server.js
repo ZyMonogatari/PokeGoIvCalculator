@@ -7,7 +7,7 @@ app.set('views', './views');
 app.set('view engine', 'jade');
 app.use(express.static('public'));
 
-var port = (8080);
+var port = (process.env.PORT || 5000));
 var Calculator = require("./models/Calculator");
 var Data = require("./models/Data")
 
